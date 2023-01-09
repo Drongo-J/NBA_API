@@ -11,9 +11,6 @@ using System.Windows.Input;
 
 namespace NbaApi.Services.NBAApiService
 {
-
-
-
     public class NbaApiService
     {
         public async Task<List<Player>> GetPlayersByTeamIdAsync(int teamId)
@@ -24,10 +21,10 @@ namespace NbaApi.Services.NBAApiService
                 Method = HttpMethod.Get,
                 RequestUri = new Uri($"https://api-nba-v1.p.rapidapi.com/players?team={teamId}&season=2021"),
                 Headers =
-    {
-        { "X-RapidAPI-Key", ApiKeys.Key },
-        { "X-RapidAPI-Host", "api-nba-v1.p.rapidapi.com" },
-    },
+                {
+                    { "X-RapidAPI-Key", ApiKeys.Key },
+                    { "X-RapidAPI-Host", "api-nba-v1.p.rapidapi.com" },
+                },
             };
             using (var response = await client.SendAsync(request))
             {

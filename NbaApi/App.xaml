@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:NbaApi"
              StartupUri="\Views\MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Dictionaries/Dictionary.xaml" x:Name="Dictionary"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

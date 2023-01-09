@@ -67,11 +67,28 @@
     <Compile Include="ApiEntities\Entities.cs" />
     <Compile Include="ApiEntities\EntitiesTeams.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Models\Country.cs" />
     <Compile Include="Models\PageNo.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Services\JsonHelper.cs" />
     <Compile Include="Services\NBAApiService\ApiKeys.cs" />
     <Compile Include="Services\NBAApiService\NbaApiService.cs" />
+    <Compile Include="ViewModels\PlayersUCViewModel.cs" />
+    <Compile Include="Views\PlayersUC.xaml.cs">
+      <DependentUpon>PlayersUC.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Dictionaries\Dictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CountriesUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HomeUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -81,11 +98,22 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\CountriesUCViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="Views\CountriesUC.xaml.cs">
+      <DependentUpon>CountriesUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomeUC.xaml.cs">
+      <DependentUpon>HomeUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\PlayersUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -116,6 +144,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Assets\basketball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\noImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\back.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

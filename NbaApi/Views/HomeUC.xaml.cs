@@ -1,7 +1,4 @@
-﻿using NbaApi.Services.NBAApiService;
-using NbaApi.ViewModels;
-using NbaApi.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NbaApi
+namespace NbaApi.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for HomeUC.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HomeUC : UserControl
     {
-       
-        public MainWindow()
+        public HomeUC()
         {
             InitializeComponent();
-            App.MyGrid = MyGrid;
-            var homeUC = new HomeUC();
-            var homeVM = new HomeViewModel();
-            homeUC.DataContext = homeVM;
-            App.ChangePage(homeUC);
         }
     }
 }
